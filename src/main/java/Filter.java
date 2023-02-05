@@ -25,7 +25,7 @@ public class Filter {
     }
 
     public boolean matches(Map<String, String> resource) throws PropertyNotFoundException {
-        //stack is ordered in reverse polish notation, for order of operations
+        //queue is ordered in reverse polish notation, for order of operations
         Stack<Comparable> stack = new Stack<>();
         for(Token token : builder.queue) {
             if (token.getType() == TokenType.COMPARABLE) {
